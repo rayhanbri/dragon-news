@@ -9,6 +9,7 @@ const HomeLayout = () => {
         <Header></Header>
       </header>
       <main>
+       
         {/* left navbar  */}
         <section className="left-navbar"></section>
         {/* main  out let section  */}

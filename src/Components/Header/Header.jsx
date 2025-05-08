@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className='flex justify-center flex-col gap-3 items-center'>
       <img src={logo} alt="" />
-      <p>Journalism Without Fear or Favour</p>
+      <p className='text-accent'> Journalism Without Fear or Favour</p>
     </div>
   );
 };
