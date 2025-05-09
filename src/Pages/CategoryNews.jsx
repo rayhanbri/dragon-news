@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { TbCategoryPlus } from 'react-icons/tb';
 import { useLoaderData, useParams } from 'react-router';
+import NewsCard from '../Components/NewsCard/NewsCard';
 
 const CategoryNews = () => {
   const [categoryNews, setCategoryNews] = useState([]);
@@ -33,7 +35,14 @@ const CategoryNews = () => {
   return (
 
     <div>
-      <p>Total {categoryNews.length} news found</p>
+      <p className='font-bold  font-serif'>Total <span className='text-secondary'>{categoryNews.length}</span> news found</p>
+      <div className='grid grid-cols-1 gap-5'>
+
+        {
+          categoryNews.map(news =>  <NewsCard key={news.id} news={news}></NewsCard>)
+        }
+
+      </div>
     </div>
   );
 };
