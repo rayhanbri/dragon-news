@@ -1,8 +1,10 @@
 import React from 'react';
 import { FaBookmark, FaEye, FaShareAlt, FaStar } from 'react-icons/fa';
+import { Link } from 'react-router';
 
 const NewsCard = ({ news}) => {
   const {
+    id,
     title,
     rating,
     total_view,
@@ -44,7 +46,7 @@ const NewsCard = ({ news}) => {
         <p className="text-sm text-gray-700">
           {details.length > 200 ? `${details.slice(0, 200)}...` : details}
         </p>
-        <a className="text-orange-600 font-semibold mt-2 cursor-pointer">Read More</a>
+        <Link to={`/news-details/${id}`} className="text-orange-600 font-semibold mt-2 cursor-pointer">Read More</Link>
 
         {/* Footer: Rating & Views */}
         <div className="flex justify-between items-center mt-4">
